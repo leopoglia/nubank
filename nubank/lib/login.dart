@@ -1,4 +1,3 @@
-import 'package:nubank/task_item.dart';
 import 'package:flutter/material.dart';
 
 import 'home.dart';
@@ -13,14 +12,10 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
 
 
-  TextEditingController task = TextEditingController();
-  TextEditingController descricao = TextEditingController();
-  List<TaskItem> tasks = [];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff5C0098),
+      backgroundColor: Color(0xff820AD1),
       body: Center(
         child:
         GestureDetector(
