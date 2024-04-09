@@ -19,12 +19,12 @@ class _LoginState extends State<Login> {
       body: Center(
         child:
         GestureDetector(
-            onTap: (){
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Home()),);
-            },
-            child:
+          onTap: (){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Home()),);
+          },
+          child:
           new Image.asset(
             'images/nubank.png',
             width: 208.0,
@@ -32,7 +32,7 @@ class _LoginState extends State<Login> {
             fit: BoxFit.cover,
 
           ),
-          ),
+        ),
       ),
     );
   }

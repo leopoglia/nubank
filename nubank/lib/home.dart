@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nubank/credit.dart';
+import 'login.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -39,43 +41,51 @@ class Home extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Padding(
-                      padding: EdgeInsets.fromLTRB(40, 20, 40, 0),
-                      child: Container(
-                        width: 1000,
-                        height: 220,
-                        decoration: BoxDecoration(
-                            borderRadius:
-                                BorderRadius.all((Radius.circular(21))),
-                            color: Color(0xff9500F6)),
-                        child: Stack(
-                          children: [
-                            Padding(
-                                padding: EdgeInsets.fromLTRB(10, 25, 20, 0),
-                                child: Row(
-                                  children: [
-                                    Spacer(),
-                                    new Image.asset(
-                                      'images/mastercard.png',
-                                      width: 68.0,
-                                      height: 38.25,
-                                    ),
-                                  ],
-                                )),
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(25, 160, 10, 0),
-                              child: Text(
-                                "Leonardo",
-                                style: GoogleFonts.poppins(
-                                  color: Colors.white,
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.w600,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Credit()),
+                      );
+                    },
+                    child: Padding(
+                        padding: EdgeInsets.fromLTRB(40, 20, 40, 0),
+                        child: Container(
+                          width: 1000,
+                          height: 220,
+                          decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all((Radius.circular(21))),
+                              color: Color(0xff9500F6)),
+                          child: Stack(
+                            children: [
+                              Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 25, 20, 0),
+                                  child: Row(
+                                    children: [
+                                      Spacer(),
+                                      new Image.asset(
+                                        'images/mastercard.png',
+                                        width: 68.0,
+                                        height: 38.25,
+                                      ),
+                                    ],
+                                  )),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(25, 160, 10, 0),
+                                child: Text(
+                                  "Leonardo",
+                                  style: GoogleFonts.poppins(
+                                    color: Colors.white,
+                                    fontSize: 30,
+                                    fontWeight: FontWeight.w600,
+                                  ),
                                 ),
-                              ),
-                            )
-                          ],
-                        ),
-                      )),
+                              )
+                            ],
+                          ),
+                        )),
+                  ),
                   Padding(
                     padding: EdgeInsets.fromLTRB(40, 20, 40, 0),
                     child: Container(
@@ -150,16 +160,18 @@ class Home extends StatelessWidget {
                                     child: Stack(
                                       children: [
                                         new Image.asset(
+                                          height: 30,
+                                          fit: BoxFit.fitWidth,
                                           'images/pix.png',
                                         ),
                                         Padding(
                                             padding: EdgeInsets.fromLTRB(
-                                                0, 120, 0, 0),
+                                                0, 95, 0, 0),
                                             child: Text(
                                               "Fazer um Pix",
                                               style: GoogleFonts.poppins(
                                                 color: Colors.white,
-                                                fontSize: 16,
+                                                fontSize: 19,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             )),
@@ -182,16 +194,18 @@ class Home extends StatelessWidget {
                                     child: Stack(
                                       children: [
                                         new Image.asset(
-                                          'images/pix.png',
+                                          height: 22,
+                                          fit: BoxFit.fitWidth,
+                                          'images/code.png',
                                         ),
                                         Padding(
                                             padding: EdgeInsets.fromLTRB(
-                                                0, 120, 0, 0),
+                                                0, 95, 0, 0),
                                             child: Text(
-                                              "Fazer um Pix",
+                                              "Pagar um boleto",
                                               style: GoogleFonts.poppins(
                                                 color: Colors.white,
-                                                fontSize: 16,
+                                                fontSize: 19,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             )),
@@ -214,16 +228,18 @@ class Home extends StatelessWidget {
                                     child: Stack(
                                       children: [
                                         new Image.asset(
-                                          'images/pix.png',
+                                          height: 30,
+                                          fit: BoxFit.fitWidth,
+                                          'images/money.png',
                                         ),
                                         Padding(
                                             padding: EdgeInsets.fromLTRB(
-                                                0, 120, 0, 0),
+                                                0, 95, 0, 0),
                                             child: Text(
-                                              "Fazer um Pix",
+                                              "Fazer um depósito",
                                               style: GoogleFonts.poppins(
                                                 color: Colors.white,
-                                                fontSize: 16,
+                                                fontSize: 19,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             )),
@@ -246,16 +262,18 @@ class Home extends StatelessWidget {
                                     child: Stack(
                                       children: [
                                         new Image.asset(
+                                          height: 30,
+                                          fit: BoxFit.fitWidth,
                                           'images/pix.png',
                                         ),
                                         Padding(
                                             padding: EdgeInsets.fromLTRB(
-                                                0, 120, 0, 0),
+                                                0, 95, 0, 0),
                                             child: Text(
-                                              "Fazer um Pix",
+                                              "Fazer um depósito",
                                               style: GoogleFonts.poppins(
                                                 color: Colors.white,
-                                                fontSize: 16,
+                                                fontSize: 19,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             )),
@@ -278,16 +296,18 @@ class Home extends StatelessWidget {
                                     child: Stack(
                                       children: [
                                         new Image.asset(
-                                          'images/pix.png',
+                                          height: 22,
+                                          fit: BoxFit.fitWidth,
+                                          'images/code.png',
                                         ),
                                         Padding(
                                             padding: EdgeInsets.fromLTRB(
-                                                0, 120, 0, 0),
+                                                0, 95, 0, 0),
                                             child: Text(
-                                              "Fazer um Pix",
+                                              "Fazer um depósito",
                                               style: GoogleFonts.poppins(
                                                 color: Colors.white,
-                                                fontSize: 16,
+                                                fontSize: 19,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             )),
@@ -310,16 +330,18 @@ class Home extends StatelessWidget {
                                     child: Stack(
                                       children: [
                                         new Image.asset(
-                                          'images/pix.png',
+                                          height: 30,
+                                          fit: BoxFit.fitWidth,
+                                          'images/money.png',
                                         ),
                                         Padding(
                                             padding: EdgeInsets.fromLTRB(
-                                                0, 120, 0, 0),
+                                                0, 95, 0, 0),
                                             child: Text(
-                                              "Fazer um Pix",
+                                              "Fazer um depósito",
                                               style: GoogleFonts.poppins(
                                                 color: Colors.white,
-                                                fontSize: 16,
+                                                fontSize: 19,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             )),
