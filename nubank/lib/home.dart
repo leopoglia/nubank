@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:nubank/credit.dart';
+import 'package:nubank/pix.dart';
 import 'login.dart';
 
 class Home extends StatelessWidget {
@@ -145,40 +146,49 @@ class Home extends StatelessWidget {
                       child: SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child: Row(children: <Widget>[
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(45, 0, 10, 0),
-                              child: Container(
-                                  width: 140,
-                                  height: 180,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(
-                                          (Radius.circular(21))),
-                                      color: Color(0xff9500F6)),
-                                  child: Padding(
-                                    padding:
-                                        EdgeInsets.fromLTRB(15, 15, 15, 15),
-                                    child: Stack(
-                                      children: [
-                                        new Image.asset(
-                                          height: 30,
-                                          fit: BoxFit.fitWidth,
-                                          'images/pix.png',
+                            //// aqui ///
+                            GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Pix()),
+                                  );
+                                },
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(45, 0, 10, 0),
+                                  child: Container(
+                                      width: 140,
+                                      height: 180,
+                                      decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.all(
+                                              (Radius.circular(21))),
+                                          color: Color(0xff9500F6)),
+                                      child: Padding(
+                                        padding:
+                                            EdgeInsets.fromLTRB(15, 15, 15, 15),
+                                        child: Stack(
+                                          children: [
+                                            new Image.asset(
+                                              height: 30,
+                                              fit: BoxFit.fitWidth,
+                                              'images/pix.png',
+                                            ),
+                                            Padding(
+                                                padding: EdgeInsets.fromLTRB(
+                                                    0, 95, 0, 0),
+                                                child: Text(
+                                                  "Fazer um Pix",
+                                                  style: GoogleFonts.poppins(
+                                                    color: Colors.white,
+                                                    fontSize: 19,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                                )),
+                                          ],
                                         ),
-                                        Padding(
-                                            padding: EdgeInsets.fromLTRB(
-                                                0, 95, 0, 0),
-                                            child: Text(
-                                              "Fazer um Pix",
-                                              style: GoogleFonts.poppins(
-                                                color: Colors.white,
-                                                fontSize: 19,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                            )),
-                                      ],
-                                    ),
-                                  )),
-                            ),
+                                      )),
+                                )),
                             Padding(
                               padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
                               child: Container(
