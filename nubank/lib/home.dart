@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nubank/boleto.dart';
 import 'package:nubank/credit.dart';
 import 'package:nubank/pix.dart';
 import 'login.dart';
@@ -146,7 +147,6 @@ class Home extends StatelessWidget {
                       child: SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child: Row(children: <Widget>[
-                            //// aqui ///
                             GestureDetector(
                                 onTap: () {
                                   Navigator.push(
@@ -189,6 +189,15 @@ class Home extends StatelessWidget {
                                         ),
                                       )),
                                 )),
+                      GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Boleto()),
+                            );
+                          },
+                          child:
                             Padding(
                               padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
                               child: Container(
@@ -222,6 +231,7 @@ class Home extends StatelessWidget {
                                       ],
                                     ),
                                   )),
+                            ),
                             ),
                             Padding(
                               padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
