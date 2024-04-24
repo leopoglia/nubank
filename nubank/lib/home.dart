@@ -165,8 +165,7 @@ class Home extends StatelessWidget {
                                               (Radius.circular(21))),
                                           color: Color(0xff9500F6)),
                                       child: Padding(
-                                        padding:
-                                            EdgeInsets.fromLTRB(15, 15, 15, 15),
+                                        padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
                                         child: Stack(
                                           children: [
                                             new Image.asset(
@@ -189,49 +188,48 @@ class Home extends StatelessWidget {
                                         ),
                                       )),
                                 )),
-                      GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Boleto()),
-                            );
-                          },
-                          child:
-                            Padding(
-                              padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
-                              child: Container(
-                                  width: 140,
-                                  height: 180,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.all(
-                                          (Radius.circular(21))),
-                                      color: Color(0xff9500F6)),
-                                  child: Padding(
-                                    padding:
-                                        EdgeInsets.fromLTRB(15, 15, 15, 15),
-                                    child: Stack(
-                                      children: [
-                                        new Image.asset(
-                                          height: 22,
-                                          fit: BoxFit.fitWidth,
-                                          'images/code.png',
-                                        ),
-                                        Padding(
-                                            padding: EdgeInsets.fromLTRB(
-                                                0, 95, 0, 0),
-                                            child: Text(
-                                              "Pagar um boleto",
-                                              style: GoogleFonts.poppins(
-                                                color: Colors.white,
-                                                fontSize: 19,
-                                                fontWeight: FontWeight.w500,
-                                              ),
-                                            )),
-                                      ],
-                                    ),
-                                  )),
-                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Boleto()),
+                                );
+                              },
+                              child: Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                                child: Container(
+                                    width: 140,
+                                    height: 180,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.all(
+                                            (Radius.circular(21))),
+                                        color: Color(0xff9500F6)),
+                                    child: Padding(
+                                      padding:
+                                          EdgeInsets.fromLTRB(15, 15, 15, 15),
+                                      child: Stack(
+                                        children: [
+                                          new Image.asset(
+                                            height: 22,
+                                            fit: BoxFit.fitWidth,
+                                            'images/code.png',
+                                          ),
+                                          Padding(
+                                              padding: EdgeInsets.fromLTRB(
+                                                  0, 95, 0, 0),
+                                              child: Text(
+                                                "Pagar um boleto",
+                                                style: GoogleFonts.poppins(
+                                                  color: Colors.white,
+                                                  fontSize: 19,
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              )),
+                                        ],
+                                      ),
+                                    )),
+                              ),
                             ),
                             Padding(
                               padding: EdgeInsets.fromLTRB(0, 0, 10, 0),

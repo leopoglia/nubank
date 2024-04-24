@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nubank/chaves.dart';
 
 import 'home.dart';
 
@@ -132,95 +133,102 @@ class _PixState extends State<Pix> {
                 decoration: BoxDecoration(color: Color(0xffE5E5E5)),
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(50, 50, 50, 50),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                              width: 70,
-                              height: 70,
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all((Radius.circular(40))),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                                child: new Image.asset(
-                                  fit: BoxFit.fitWidth,
-                                  'images/key.png',
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Chaves()),
+                      );
+                    },
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                                width: 70,
+                                height: 70,
+                                decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all((Radius.circular(40))),
                                 ),
-                              )),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                            child: Text(
-                              "Minhas chaves",
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                                  child: new Image.asset(
+                                    fit: BoxFit.fitWidth,
+                                    'images/key.png',
+                                  ),
+                                )),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                              child: Text(
+                                "Minhas chaves",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
-                          ),
-                          Spacer(),
-                          Container(
-                              width: 40,
-                              decoration: BoxDecoration(
-                                borderRadius:
-                                    BorderRadius.all((Radius.circular(40))),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
-                                child: new Image.asset(
-                                  fit: BoxFit.fitWidth,
-                                  'images/pixarrow.png',
+                            Spacer(),
+                            Container(
+                                width: 40,
+                                decoration: BoxDecoration(
+                                  borderRadius:
+                                      BorderRadius.all((Radius.circular(40))),
                                 ),
-                              )),
-                        ],
-                      ),
-                      Padding(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-                          child: Row(
-                            children: [
-                              Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius:
-                                        BorderRadius.all((Radius.circular(40))),
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(15, 15, 15, 15),
+                                  child: new Image.asset(
+                                    fit: BoxFit.fitWidth,
+                                    'images/pixarrow.png',
                                   ),
-                                  child: Padding(
-                                    padding:
-                                        EdgeInsets.fromLTRB(12, 0, 0, 0),
-                                    child: new Image.asset(
-                                      fit: BoxFit.fitWidth,
-                                      'images/help.png',
+                                )),
+                          ],
+                        ),
+                        Padding(
+                            padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                            child: Row(
+                              children: [
+                                Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                          (Radius.circular(40))),
                                     ),
-                                  )),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(34, 0, 0, 0),
-                                child: Text(
-                                  "Me ajuda",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
+                                    child: Padding(
+                                      padding: EdgeInsets.fromLTRB(12, 0, 0, 0),
+                                      child: new Image.asset(
+                                        fit: BoxFit.fitWidth,
+                                        'images/help.png',
+                                      ),
+                                    )),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(34, 0, 0, 0),
+                                  child: Text(
+                                    "Me ajuda",
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Spacer(),
-                              Container(
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    borderRadius:
-                                        BorderRadius.all((Radius.circular(40))),
-                                  ),
-                                  child: Padding(
-                                    padding:
-                                        EdgeInsets.fromLTRB(15, 15, 15, 15),
-                                    child: new Image.asset(
-                                      fit: BoxFit.fitWidth,
-                                      'images/pixarrow.png',
+                                Spacer(),
+                                Container(
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.all(
+                                          (Radius.circular(40))),
                                     ),
-                                  )),
-                            ],
-                          ))
-                    ],
+                                    child: Padding(
+                                      padding:
+                                          EdgeInsets.fromLTRB(15, 15, 15, 15),
+                                      child: new Image.asset(
+                                        fit: BoxFit.fitWidth,
+                                        'images/pixarrow.png',
+                                      ),
+                                    )),
+                              ],
+                            ))
+                      ],
+                    ),
                   ),
                 ))),
       ]),

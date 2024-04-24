@@ -205,6 +205,29 @@ class _CreditState extends State<Credit> {
                   Padding(
                     padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
                     child: Container(
+                      width: 195,
+                      height: 60,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all((Radius.circular(40))),
+                          color: Color(0xff820AD1)),
+                      child: Row(
+                        children: [
+                          new Image.asset(
+                            'images/block.png',
+                            width: 68.0,
+                            height: 38.25,
+                          ),
+                          Text(
+                            "Bloquear cartão",
+                            style: TextStyle(color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                    child: Container(
                       width: 180,
                       height: 60,
                       decoration: BoxDecoration(
@@ -213,12 +236,35 @@ class _CreditState extends State<Credit> {
                       child: Row(
                         children: [
                           new Image.asset(
-                            'images/code.png',
+                            'images/pencil.png',
                             width: 68.0,
                             height: 38.25,
                           ),
                           Text(
-                            "Pagar fatura",
+                            "Editar senha",
+                            style: TextStyle(color: Colors.white),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                    child: Container(
+                      width: 185,
+                      height: 60,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all((Radius.circular(40))),
+                          color: Color(0xff820AD1)),
+                      child: Row(
+                        children: [
+                          new Image.asset(
+                            'images/close.png',
+                            width: 68.0,
+                            height: 38.25,
+                          ),
+                          Text(
+                            "Excluir cartão",
                             style: TextStyle(color: Colors.white),
                           )
                         ],
